@@ -9,8 +9,8 @@ $response = file_get_contents($api_url);
 $data = json_decode($response, true);
 
 // Check if data is retrieved successfully
-if ($data && isset($data['records'])) {
-    $records = $data['records'];
+if ($data && isset($data['results'])) {
+    $records = $data['results']; // Changed from 'records' to 'results'
 } else {
     $records = [];
     echo "<p>No data found or there was an error fetching the data.</p>";
